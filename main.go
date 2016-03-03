@@ -10,6 +10,10 @@ import (
 
 type Whitelist map[string]struct{}
 
+func (w Whitelist) Add(username string) {
+	whitelist[username] = struct{}{}
+}
+
 func (w Whitelist) Contains(username string) bool {
 	_, ok := whitelist[username]
 	return ok
@@ -32,7 +36,7 @@ func makeWhitelist(usernames ...string) Whitelist {
 	w := Whitelist{}
 
 	for _, username := range usernames {
-		w[username] = struct{}{}
+		w.Add(username)
 	}
 
 	return w
