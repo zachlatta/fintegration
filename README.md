@@ -2,6 +2,8 @@
 
 Access [Fin](https://www.fin.com) through `/fin` on Slack.
 
+![Demo](demo.gif)
+
 ## Usage
 
 ### Fintegration Setup
