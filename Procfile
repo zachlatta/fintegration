@@ -1,1 +1,1 @@
-web: fintegration
+web: src
