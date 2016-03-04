@@ -11,11 +11,11 @@ import (
 type Whitelist map[string]struct{}
 
 func (w Whitelist) Add(username string) {
-	whitelist[username] = struct{}{}
+	w[username] = struct{}{}
 }
 
 func (w Whitelist) Contains(username string) bool {
-	_, ok := whitelist[username]
+	_, ok := w[username]
 	return ok
 }
 
